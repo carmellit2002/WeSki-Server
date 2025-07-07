@@ -1,4 +1,4 @@
-const BASE_SERVER_URL = "https://gya7b1xubh.execute-api.eu-west-2.amazonaws.com/default/HotelsSimulator";
+const BASE_SERVER_URL = "https://gya7b1xubh.execute-api.eu-west-2.amazonaws.com/";
 
 const HOTELS_SIMULATOR_REQUESTOR_CONFIG = {
     baseURL: BASE_SERVER_URL,

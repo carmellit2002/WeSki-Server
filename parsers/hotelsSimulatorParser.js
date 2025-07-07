@@ -10,7 +10,7 @@ const parseHotelSimulatorsData = (hotels) => {
             // location: hotel.HotelInfo.Position
             location: "Location",
             price: hotel.PricesInfo.AmountAfterTax,
-            mainImage: hotel.HotelDescriptiveContent.Images.find((image) => image.MainImage === true).URL
+            mainImage: hotel.HotelDescriptiveContent.Images.find((image) => image.MainImage === "True").URL
         }
 
         parsedHotels = [...parsedHotels, parsedHotel];
