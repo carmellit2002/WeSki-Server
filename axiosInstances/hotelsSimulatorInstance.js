@@ -15,7 +15,7 @@ const getHotels = async (destinationId, groupSize, startDate, endDate) => {
 
     try {
         const response = await hotelsSimulatorRequestor.post(HOTELS_SIMULATOR_ROUTES.API.GET_HOTELS, requestBody);
-        const data = response.data.body.accommodations;
+        const data = response.data.body.accommodations || [];
         return data;
     } catch (e) {
         console.log(ERRORS.GET_HOTELS, e);
