@@ -1,9 +1,21 @@
-export const corsOptions = {
+const { hotelsSimlaturInstance, getHotels } = require("./axiosInstances/hotelsSimulatorInstance");
+const { parseHotelSimulatorsData } = require("./parsers/hotelsSimulatorParser");
+
+const corsOptions = {
   origin: 'http://localhost:5173',
   credentials: true,
   optionSuccessStatus: 200
 }
 
-export const providers = {
-  HotelsSimulator: "https://gya7b1xubh.execute-api.eu-west-2.amazonaws.com/default/HotelsSimulator"
+const providers = [
+  {
+    providerInstance: hotelsSimlaturInstance,
+    fetchMethod: getHotels,
+    parseMethod: parseHotelSimulatorsData
+  }
+]
+
+module.exports = {
+  corsOptions,
+  providers
 }
