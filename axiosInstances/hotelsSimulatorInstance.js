@@ -6,10 +6,10 @@ const hotelsSimulatorRequestor = axios.create(HOTELS_SIMULATOR_REQUESTOR_CONFIG)
 const getHotels = async (destinationId, groupSize, startDate, endDate) => {
     const requestBody = { 
         query: {
-            ski_site: destinationId,
+            ski_site: parseInt(destinationId),
             from_date: startDate,
             to_date: endDate,
-            group_size: groupSize
+            group_size: parseInt(groupSize)
         }
     };
 
